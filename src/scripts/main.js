@@ -1,7 +1,13 @@
 import { createPlan } from "./plan.js";
-import { createAsparagus } from "./seeds/asparagus.js";
+import { createSoybean } from "./seeds/soybean.js";
+import { addPlant, usePlants } from "./feild.js";
 
 const yearlyPlan = createPlan();
-const vege = createAsparagus();
+const vege = createSoybean();
+const plants = usePlants();
 
-console.log(vege);
+const test = () => {
+  addPlant(vege);
+  console.log(usePlants());
+};
+test();
