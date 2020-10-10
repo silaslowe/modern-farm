@@ -25,10 +25,3 @@ console.log(plantingTime);
 const harvestTime = harvestPlants(plantingTime);
 
 console.log(harvestTime);
-
-// const test = [
-//   ["Potato", "Soybean", "Soybean", "Corn"],
-//   ["Wheat", "Corn", "Wheat", "Asparagus"],
-//   ["Asparagus", "Wheat", "Soybean", "Corn"],
-//   ["Asparagus", "Soybean", "Potato", "Wheat"],
-// ];
