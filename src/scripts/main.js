@@ -1,6 +1,8 @@
 import { createPlan } from "./plan.js";
-import { addPlant, usePlants } from "./feild.js";
+import { harvestPlants } from "./harvest.js";
 import { plantSeeds } from "./tractor.js";
+// import { addPlant, usePlants } from "./feild.js";
+// import { plantSeeds } from "./tractor.js";
 
 // const yearlyPlan = createPlan();
 // const vege = createSoybean();
@@ -12,11 +14,21 @@ import { plantSeeds } from "./tractor.js";
 // };
 // test();
 
-const test = [
-  ["Potato", "Soybean", "Soybean", "Corn"],
-  ["Wheat", "Corn", "Wheat", "Asparagus"],
-  ["Asparagus", "Wheat", "Soybean", "Corn"],
-  ["Asparagus", "Soybean", "Potato", "Wheat"],
-];
+const newPlan = createPlan();
 
-plantSeeds(test);
+console.log(newPlan);
+
+const plantingTime = plantSeeds(newPlan);
+
+console.log(plantingTime);
+
+const harvestTime = harvestPlants(plantingTime);
+
+console.log(harvestTime);
+
+// const test = [
+//   ["Potato", "Soybean", "Soybean", "Corn"],
+//   ["Wheat", "Corn", "Wheat", "Asparagus"],
+//   ["Asparagus", "Wheat", "Soybean", "Corn"],
+//   ["Asparagus", "Soybean", "Potato", "Wheat"],
+// ];
