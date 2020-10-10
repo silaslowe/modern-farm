@@ -7,28 +7,27 @@ import { createWheat } from "./seeds/wheat.js";
 import { addPlant, usePlants } from "./feild.js";
 
 export const plantSeeds = (plantingPlanArray) => {
-  for (let i = 0; i < plantingPlanArray.length; i++) {
-    for (let j = 0; j < plantingPlanArray[i].length; j++) {
-      let seedling = plantingPlanArray[i][j];
-      if (seedling === "Potato") {
+  for (const row of plantingPlanArray) {
+    for (const plant of row) {
+      if (plant === "Potato") {
         addPlant(createPotato());
       }
-      if (seedling === "Corn") {
+      if (plant === "Corn") {
         addPlant(createCorn());
       }
-      if (seedling === "Asparagus") {
+      if (plant === "Asparagus") {
         addPlant(createAsparagus());
       }
-      if (seedling === "Soybean") {
+      if (plant === "Soybean") {
         addPlant(createSoybean());
       }
-      if (seedling === "Sunflower") {
+      if (plant === "Sunflower") {
         addPlant(createSunflower());
       }
-      if (seedling === "Wheat") {
+      if (plant === "Wheat") {
         addPlant(createWheat());
       }
     }
   }
-  console.log(usePlants());
+  return usePlants();
 };
