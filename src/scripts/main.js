@@ -1,7 +1,7 @@
 import { createPlan } from "./plan.js";
-import { harvestPlants } from "./harvest.js";
+import { harvestPlants } from "./harvester.js";
 import { plantSeeds } from "./tractor.js";
-// import { addPlant, usePlants } from "./feild.js";
+import { Catalog } from "./catalog.js";
 // import { plantSeeds } from "./tractor.js";
 
 // const yearlyPlan = createPlan();
@@ -25,3 +25,5 @@ console.log(plantingTime);
 const harvestTime = harvestPlants(plantingTime);
 
 console.log(harvestTime);
+
+Catalog(harvestTime);
